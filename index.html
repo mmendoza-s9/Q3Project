@@ -42,5 +42,50 @@
 	</div>
 	<h2>Fare Guide</h2>
 	<hr>
+	<div class ="container">
+		<form>
+			<label for="ftrain">leaving from: </label>
+			<div class="stations">
+				<select class="form-select">
+					<option>Santolan</option>
+				</select>
+			</div>	
+		
+			<label for="ftrain">going to: </label>
+			<div class="stations">
+				<select class="form-select">
+					<option>Recto</option>
+				</select>
+			</div>	
+		
+		<p>regular fare:</p>
+		
+		<p>discounted fare (20% less):</p>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="radio1" name="option1" value="discount">
+				<label class="form-check-label">student</label>
+			</div>
+		
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="radio2" name="option2" value="discount">
+				<label class="form-check-label">senior citizen</label>
+			</div>
+		
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="radio3" name="option3" value="discount">
+				<label class="form-check-label">PWD</label>
+			</div>
+		</form>
+	<br/>
+		
+	<button onclick="myFunction()">buy ticket</button>
+	<script>
+	function myFunction() {
+		alert("your ticket has been bought for");
+	}
+	</script>
+		
+	<button type="button" class="btn btn-outline-success" onclick="window.location.reload()">refresh</button>
+	</div>
 </body>
 </html>
