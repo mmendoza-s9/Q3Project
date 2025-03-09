@@ -5,8 +5,6 @@ body {
 h2 {
   background-color: #3563b9;
   margin: 10px;
+  padding: 5%;
 }
 
-textarea {
-  resize: none;
-}
