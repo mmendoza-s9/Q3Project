@@ -42,37 +42,42 @@
 	</div>
 	<h2>Fare Guide</h2>
 	<hr>
-	<div class ="container">
-		<form>
-			<label for="ftrain">leaving from: </label>
-			<div class="stations">
-				<select class="form-select">
-					<option>Santolan</option>
-				</select>
-			</div>	
-		
-			<label for="ftrain">going to: </label>
-			<div class="stations">
+  <div class ="container">
+		<form class="form-horizontal">
+			<label class="control-label col-sm-2" for="ftrain">leaving from: </label>
+            <div class="col-sm-10">
+			<div class="form-group">
+                  <select class="form-select">
+                      <option>Santolan</option>
+                  </select>
+            </div>
+            </div>
+
+			<label class="control-label col-sm-2" for="ftrain">going to: </label>
+            <div class="col-sm-10">
+			<div class="form-group">
 				<select class="form-select">
 					<option>Recto</option>
 				</select>
-			</div>	
+			</div>
+            </div>
 		
 		<p>regular fare:</p>
-		
+
 		<p>discounted fare (20% less):</p>
-			<div class="form-check">
-				<input class="form-check-input" type="radio" id="radio1" name="option1" value="discount">
+     
+			<div class="form-group form-control">
+				<input class="form-check-input" type="checkbox" id="checkbox1" name="option1" value="discount">
 				<label class="form-check-label">student</label>
 			</div>
 		
-			<div class="form-check">
-				<input class="form-check-input" type="radio" id="radio2" name="option2" value="discount">
+			<div class="form-group form-control">
+				<input class="form-check-input" type="checkbox" id="checkbox2" name="option2" value="discount">
 				<label class="form-check-label">senior citizen</label>
 			</div>
 		
-			<div class="form-check">
-				<input class="form-check-input" type="radio" id="radio3" name="option3" value="discount">
+			<div class="form-group form-control">
+				<input class="form-check-input" type="checkbox" id="checkbox3" name="option3" value="discount">
 				<label class="form-check-label">PWD</label>
 			</div>
 		</form>
@@ -87,5 +92,7 @@
 		
 	<button type="button" class=""btn btn-outline-primary" onclick="window.location.reload()">refresh</button>
 	</div>
+</body>
+</html>
 </body>
 </html>
