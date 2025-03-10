@@ -16,6 +16,7 @@ h2 {
 
 textarea {
   background-color: #becee8;
+  border-radius: 25px;
 }
 
 p, label, button {
