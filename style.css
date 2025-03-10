@@ -15,7 +15,7 @@ textarea {
   background-color: #becee8;
 }
 
-p, label {
+p, label, button {
   font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
