@@ -5,10 +5,16 @@ body {
   background-size: cover;
 }
 
-h2, h4 {
+h2, {
   background-color: #3563b9;
   margin: 5px;
   padding: 20px;
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h4 {
   font-family: "Arvo", serif;
   font-weight: 400;
   font-style: normal;
