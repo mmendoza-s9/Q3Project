@@ -137,9 +137,13 @@
 			}
 		</script>
 		   <button type="button" class="btn btn-outline-primary" onclick="myFunction()">buy ticket</button>
-		 <script>
+		<script>
 			function myFunction() {
-				alert("your ticket has been bought for");
+				if (confirm("confirm purchase?")) {
+					alert("ticket bought successfully. buy another?");
+				} else {
+					alert("ticket cancelled. buy another?");
+				}
 			}
 		</script>
 	 <button type="button" class="btn btn-outline-primary" onclick="window.location.reload()">refresh</button>
