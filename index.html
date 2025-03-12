@@ -1,3 +1,8 @@
+OG CODE
+
+
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -16,36 +21,62 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-    
-    <title>Fare Guide</title>
+
+<title>Fare Guide</title>
 </head>
 <body>
+    <!-- navbar -->
     <div class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="https://png.pngtree.com/png-vector/20210605/ourmid/pngtree-speed-train-logo-template-png-image_3417841.jpg" alt="logo" style="width:45px;" class="rounded-pill">
+            <img src="https://png.pngtree.com/png-vector/20210605/ourmid/pngtree-speed-train-logo-template-png-image_3417841.jpg" alt="logo" style="width:45px;" class="rounded-pill"> 
             </a>
         </div>
-        <div class="container-fluid">
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="schedule.html">Train Schedule</a></li>
-                <li class="nav-item"><a class="nav-link active" href="contact.html">Help</a></li>
-            </ul>
-            <form class="d-flex">
-                <input type="text" placeholder="Search">
-                <button class="btn btn-outline-primary" type="button">Search</button>
-            </form>
-        </div>
+    <div class="container-fluid">
+        <ul class="nav">
+            <li class="nav-item">
+            <a class="nav-link active" href="index.html">home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link active" href="schedule.html">train schedule</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link active" href="contact.html">help</a>
+            </li>
+        </ul>
+        <form class="d-flex">
+            <input class="form-control me-2" type="text" placeholder="Search">
+            <button class="btn btn-outline-primary" type="button">Search</button>
+        </form>
     </div>
-
+    </div>        
     <h2>Fare Guide</h2>
     <hr>
-    <div class="container">
-        <img src="transitmap.jpg" alt="map" id="map">
-        <img src="ticket.png" alt="ticket" id="ticket">
+     <div class ="container">
+    <img src="transitmap.jpg" alt="map" id="map">
+     <img src="ticket.png" alt="ticket" id="ticket">
         <form class="form-horizontal">
-            <label for="ftrain">Leaving from:</label>
+            <label class="control-label col-sm-2" for="ftrain">leaving from: </label>
+            <div class="col-sm-10">
+        <div class="form-group">
+            <select class="form-select">
+                  <option>Santolan</option>
+                  <option>Katipunan</option>
+                  <option>Anonas</option>
+                  <option>Araneta Center-Cubao</option>
+                  <option>Betty Go-Belmonte</option>
+                  <option>Gilmore</option>
+                  <option>J. Ruiz</option>
+                  <option>V. Mapa</option>
+                  <option>Pureza</option>
+                  <option>Legarda</option>
+                  <option>Recto</option>
+            </select>
+        </div>
+        </div>
+            <label class="control-label col-sm-2" for="ftrain">going to: </label>
+            <div class="col-sm-10">
+        <div class="form-group">
             <select class="form-select">
                 <option>Santolan</option>
                 <option>Katipunan</option>
@@ -59,33 +90,64 @@
                 <option>Legarda</option>
                 <option>Recto</option>
             </select>
+        </div>
+        </div>
+        <label> enter number of stops: </label>
+    <input type="text" name="ticket-price" id="regular-ticket">
+</form>
 
-            <label for="ftrain">Going to:</label>
-            <select class="form-select">
-                <option>Santolan</option>
-                <option>Katipunan</option>
-                <option>Anonas</option>
-                <option>Araneta Center-Cubao</option>
-                <option>Betty Go-Belmonte</option>
-                <option>Gilmore</option>
-                <option>J. Ruiz</option>
-                <option>V. Mapa</option>
-                <option>Pureza</option>
-                <option>Legarda</option>
-                <option>Recto</option>
-            </select>
-
-            <label>Enter number of stops:</label>
-            <input type="text" class="form-control" id="regular-ticket">
-
-            <p id="currency">Click the buttons below to know your ticket price (single journey)</p>
-            <button type="button" class="btn btn-outline-primary" onclick="toRF()">Regular Fare</button>
-            <button type="button" class="btn btn-outline-primary" onclick="toDF()">Discounted Fare</button>
-            <button type="button" class="btn btn-outline-primary" onclick="myFunction()">Buy Ticket</button>
-            <button type="button" class="btn btn-outline-primary" onclick="window.location.reload()">Refresh</button>
+<form>
+    <input class="form-check-input" type="radio" id="radio" name="option" value="discount">
+    <label class="form-check-label" for="radio1" id="discounted-ticket">Student</label>
+    <input class="form-check-input" type="radio" id="radio" name="option" value="discount">
+    <label class="form-check-label" for="radio2" id="discounted-ticket">Senior Citizen</label>
+    <input class="form-check-input" type="radio" id="radio" name="option" value="discount">
+    <label class="form-check-label" for="radio3" id="discounted-ticket">PWD</label>
+</form>
+        <p id="currency">Click the buttons below to know your ticket price (single journey)</p>
+        <button type= "button" class="btn btn-outline-primary" onclick="toRF()">regular fare</button>
+        <script type="text/javascript">
+            function toRF(){
+                var stops = parseInt(document.getElementById('regular-ticket').value);
+                    var reg= 13; 
+                    var reg_price=stops*reg;
+                document.getElementById ('currency').innerHTML=
+                'your ticket price is ' + 'P'+ '<kdb>' + reg_price
+            }
+        </script>
+        
+        <button type= "button" class="btn btn-outline-primary" onclick="toDF()">discounted fare</button>
+        <script type="text/javascript">
+             function toDF(){
+                var stops = parseInt(document.getElementById('regular-ticket').value);
+                var reg=13; 
+                var reg_price=stops*reg;
+                var disc_rate = 0;
+                var radios = document.getElementsByName("option");
+                for (var i = 0; i < radios.length; i++) {
+                    if (radios[i].checked) {
+                        disc_rate = 0.20;
+                        break;
+                    }
+                }
+                var disc_price = reg_price - (reg_price * disc_rate);
+                document.getElementById ('currency').innerHTML=
+                'your ticket price is ' + 'P'+ '<kdb>' + disc_price
+            }
+        </script>
+        
+           <button type="button" class="btn btn-outline-primary" onclick="myFunction()">buy ticket</button>
+        <script>
+            function myFunction() {
+                if (confirm("confirm purchase?")) {
+                    alert("ticket bought successfully. buy another?");
+                } else {
+                   alert("ticket cancelled. buy another?");
+                }
+            }
+        </script>
+     <button type="button" class="btn btn-outline-primary" onclick="window.location.reload()">refresh</button>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
